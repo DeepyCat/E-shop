@@ -209,14 +209,14 @@ footer {
   box-shadow: 0 0 30px rgba(79,195,255,0.5);
 }
 
-.white {
-  border-color: #e5e7eb;
+.purple {
+  border-color: #8b5cf6;
 }
-.white h3 {
-  color: #ffffff;
+.purple h3 {
+  color: #a78bfa;
 }
-.white:hover {
-  box-shadow: 0 0 30px rgba(229,231,235,0.4);
+.purple:hover {
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.4);
 }
 
 .yellow {
@@ -249,3 +249,4 @@ footer {
 .silver:hover {
   box-shadow: 0 0 35px rgba(191,197,204,0.6);
 }
+
