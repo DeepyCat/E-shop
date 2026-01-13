@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<title>Cunning Hares | ZZZ Plush Store</title>
+<link rel="stylesheet" href="cunning_hares_css.css">
+</head>
+
+<body>
+
+<header>
+  <img src="img/logo.png" class="logo">
+  <nav>
+    <a href="index.html">Domů</a>
+    <a href="categories.html">Kategorie</a>
+    <a href="about.html">O nás</a>
+    <a href="contact.html">Kontakt</a>
+  </nav>
+</header>
+
+<section class="banner">
+  <h2>Cunning Hares</h2>
+  <p>
+    Cunning Hares jsou malá, ale extrémně schopná frakce působící v New Eridu.
+    Specializují se na průzkum Hollow oblastí, rychlé zásahy a riskantní zakázky.
+    Navzdory neformálnímu vystupování jde o sehraný tým, který přežil víc,
+    než by většina lidí zvládla.
+  </p>
+</section>
+
+<section class="grid">
+  <div class="card" onclick="openModal('anby')">
+    <img src="img/anby.png">
+    <h3>Anby Demara</h3>
+    <div class="price">499 Kč</div>
+  </div>
+
+  <div class="card" onclick="openModal('billy')">
+    <img src="img/billy.png">
+    <h3>Billy Kid</h3>
+    <div class="price">459 Kč</div>
+  </div>
+
+  <div class="card" onclick="openModal('nicole')">
+    <img src="img/nicole.png">
+    <h3>Nicole Demara</h3>
+    <div class="price">529 Kč</div>
+  </div>
+</section>
+
+<!-- ===== MODAL ===== -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <img id="modal-img">
+    <h3 id="modal-title"></h3>
+    <p id="modal-desc"></p>
+    <div class="price" id="modal-price"></div>
+    <button>Přidat do košíku</button>
+    <span class="close" onclick="closeModal()">Zavřít</span>
+  </div>
+</div>
+
+<script>
+const data = {
+  anby: {
+    img: "img/anby.png",
+    title: "Anby Demara Plyšák",
+    price: "499 Kč",
+    desc: "Anby je tichá, disciplinovaná bojovnice a hlavní úderná síla Cunning Hares. Navzdory chladnému vystupování má silný smysl pro zodpovědnost a týmovou loajalitu."
+  },
+  billy: {
+    img: "img/billy.png",
+    title: "Billy Kid Plyšák",
+    price: "459 Kč",
+    desc: "Billy je android s bezstarostnou povahou a láskou k chaosu. I když působí lehkovážně, v boji je extrémně spolehlivý a nebezpečný protivník."
+  },
+  nicole: {
+    img: "img/nicole.png",
+    title: "Nicole Demara Plyšák",
+    price: "529 Kč",
+    desc: "Nicole je charismatická vůdkyně Cunning Hares. Je mistryní manipulace, vyjednávání a přežití v tvrdém světě New Eridu."
+  }
+};
+
+function openModal(key) {
+  document.getElementById("modal-img").src = data[key].img;
+  document.getElementById("modal-title").innerText = data[key].title;
+  document.getElementById("modal-desc").innerText = data[key].desc;
+  document.getElementById("modal-price").innerText = data[key].price;
+  document.getElementById("modal").style.display = "flex";
+}
+
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+}
+</script>
+
+</body>
+</html>
