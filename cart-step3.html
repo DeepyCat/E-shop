@@ -1,9 +1,38 @@
-<h3>Shrnutí objednávky</h3>
-<p>Anby Demara – 499 Kč</p>
-<p><strong>Celkem: 499 Kč</strong></p>
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <title>Košík – Doručení</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-<label>
-  <input type="checkbox"> Souhlasím s podmínkami
-</label>
+<header>
+  <h1>Košík</h1>
+  <nav>
+    <a href="index.html">Domů</a>
+    <a href="checkout-2.html">Zpět</a>
+  </nav>
+</header>
 
-<a href="confirmation.html">Objednat</a>
+<section class="grid">
+  <div class="card checkout-card green">
+    <h2>Doručení</h2>
+
+    <form>
+      <select>
+        <option>Česká pošta</option>
+        <option>Zásilkovna</option>
+        <option>Kurýr</option>
+      </select>
+
+      <input type="text" placeholder="Komu to přijde">
+      <input type="text" placeholder="Dodací adresa">
+
+      <button class="btn">Objednat (nefunkční)</button>
+    </form>
+  </div>
+</section>
+
+</body>
+</html>

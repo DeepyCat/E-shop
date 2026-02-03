@@ -1,9 +1,39 @@
-<h3>Doprava</h3>
-<label><input type="radio"> Zásilkovna</label>
-<label><input type="radio"> Kurýr</label>
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <title>Košík – Platba</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-<h3>Platba</h3>
-<label><input type="radio"> Kartou</label>
-<label><input type="radio"> Převodem</label>
+<header>
+  <h1>Košík</h1>
+  <nav>
+    <a href="index.html">Domů</a>
+    <a href="checkout-1.html">Zpět</a>
+  </nav>
+</header>
 
-<a href="cart-step3.html">Pokračovat</a>
+<section class="grid">
+  <div class="card checkout-card blue">
+    <h2>Platba</h2>
+
+    <form>
+      <select>
+        <option>Kreditní karta</option>
+        <option>PayPal</option>
+        <option>Bankovní převod</option>
+      </select>
+
+      <input type="text" placeholder="Číslo karty">
+      <input type="text" placeholder="Platnost (MM/RR)">
+      <input type="text" placeholder="CVC">
+
+      <a href="checkout-3.html" class="btn">Pokračovat</a>
+    </form>
+  </div>
+</section>
+
+</body>
+</html>
