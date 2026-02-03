@@ -277,3 +277,36 @@ footer {
     0 0 30px rgba(0,0,0,0.25),
     0 0 55px rgba(0,0,0,0.15);
 }
+.checkout-card-white {
+  background: #ffffff; /* celé bílé pozadí */
+  color: #000000; /* černý text */
+  border: 1px solid #ddd; /* jemný šedý okraj */
+  border-radius: 14px;
+  padding: 30px 25px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  transition: 0.3s;
+  margin: 0 auto;
+}
+
+.checkout-card-white input {
+  background: #f9f9f9; /* světlejší input */
+  color: #000;
+  border: 1px solid #ccc;
+}
+
+.checkout-card-white input:focus {
+  border-color: #000;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+.checkout-card-white h2 {
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.checkout-card-white .btn {
+  background: linear-gradient(135deg, #000, #444);
+  color: #fff;
+}
