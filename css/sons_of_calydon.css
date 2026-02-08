@@ -77,3 +77,32 @@ nav a:hover::after { width: 100%; }
 
 .card h3 { color: #ffd84a; }
 .price { color: #fff1b3; font-weight: bold; }
+
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.modal-content {
+  background: linear-gradient(180deg, #0b1625, #050b14);
+  border: 1px solid #4da3ff;
+  border-radius: 16px;
+  padding: 30px;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0 0 40px rgba(80,170,255,0.6);
+}
+.modal-content img { width: 100%; max-height: 200px; object-fit: contain; border-radius: 16px; }
+.modal-content h3 { color: #4da3ff; margin: 15px 0; }
+.modal-content p { color: #b8c7dd; line-height: 1.5; }
+.modal-content .price { font-size: 22px; margin: 10px 0; color: #cfe4ff; font-weight: bold; }
+.modal-content button {
+  margin-top: 15px; background: linear-gradient(135deg, #4da3ff, #cfe4ff);
+  color: #000; border: none; padding: 12px 20px; border-radius: 10px; font-weight: bold; cursor: pointer; width: 100%;
+}
+.close { margin-top: 15px; display: block; color: #9fb4cc; cursor: pointer; font-size: 14px; }
