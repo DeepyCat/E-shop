@@ -311,35 +311,46 @@ footer {
   color: #fff;
 }
 
-@media (max-width: 700px) {
+@media screen and (max-width: 700px) {
+  /* Vynutíme, aby se sekce grid chovala jako obyčejný sloupec */
+  .grid, 
+  section.grid, 
+  div.grid {
+    display: block !important;
+    width: 100% !important;
+    padding: 10px !important;
+  }
+
+  /* Každá karta dostane 100% šířku a odsazení zespodu */
+  .card, 
+  .category-card, 
+  .card.silver,
+  [class*="card"] {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+    margin: 0 0 20px 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Centrování loga a menu bez ohledu na HTML strukturu */
   header {
-    flex-direction: column !important;
-    gap: 15px !important;
-    padding: 20px !important;
+    display: block !important;
     text-align: center !important;
+    height: auto !important;
   }
 
   .logo {
-    margin: 0 auto !important;
+    display: block !important;
+    margin: 0 auto 15px auto !important;
   }
 
   nav {
-    margin: 0 !important;
-    justify-content: center !important;
-    gap: 15px !important;
-  }
-
-  /* Toto opraví index a kategorie */
-  .grid {
     display: flex !important;
-    flex-direction: column !important;
-    padding: 20px !important;
-    gap: 20px !important;
-  }
-
-  .card, .category-card {
-    width: 100% !important;
-    min-width: 100% !important; /* Tohle je ta klíčová změna */
+    justify-content: center !important;
+    flex-wrap: wrap !important;
     margin: 0 !important;
+    gap: 10px !important;
   }
 }
