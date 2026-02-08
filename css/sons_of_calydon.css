@@ -89,20 +89,20 @@ nav a:hover::after { width: 100%; }
   z-index: 9999;
 }
 .modal-content {
-  background: linear-gradient(180deg, #0b1625, #050b14);
-  border: 1px solid #4da3ff;
+  background: linear-gradient(180deg, #0e0e0e, #050505);
+  border: 1px solid #ffd84a;
   border-radius: 16px;
   padding: 30px;
   max-width: 420px;
   text-align: center;
-  box-shadow: 0 0 40px rgba(80,170,255,0.6);
+  box-shadow: 0 0 40px rgba(255,216,74,0.4);
 }
 .modal-content img { width: 100%; max-height: 200px; object-fit: contain; border-radius: 16px; }
-.modal-content h3 { color: #4da3ff; margin: 15px 0; }
-.modal-content p { color: #b8c7dd; line-height: 1.5; }
-.modal-content .price { font-size: 22px; margin: 10px 0; color: #cfe4ff; font-weight: bold; }
+.modal-content h3 { color: #ffd84a; margin: 15px 0; }
+.modal-content p { color: #bdbdbd; line-height: 1.5; }
+.modal-content .price { font-size: 22px; margin: 10px 0; color: #fff1b3; font-weight: bold; }
 .modal-content button {
-  margin-top: 15px; background: linear-gradient(135deg, #4da3ff, #cfe4ff);
+  margin-top: 15px; background: linear-gradient(135deg, #ffd84a, #fff1b3);
   color: #000; border: none; padding: 12px 20px; border-radius: 10px; font-weight: bold; cursor: pointer; width: 100%;
 }
-.close { margin-top: 15px; display: block; color: #9fb4cc; cursor: pointer; font-size: 14px; }
+.close { margin-top: 15px; display: block; color: #aaa; cursor: pointer; font-size: 14px; }
