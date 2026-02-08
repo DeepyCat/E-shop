@@ -109,7 +109,7 @@ nav a:hover::after { width: 100%; }
 }
 
 .modal-content {
-  background: linear-gradient(180deg, #0b1625, #050505);
+  background: linear-gradient(180deg, #070707, #050505);
   border: 1px solid #4da3ff;
   border-radius: 16px;
   padding: 30px;
