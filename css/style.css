@@ -313,37 +313,35 @@ footer {
 
 @media (max-width: 700px) {
   header {
-    flex-direction: column;
-    gap: 15px;
-    padding: 20px;
-    text-align: center;
+    flex-direction: column !important;
+    gap: 15px !important;
+    padding: 20px !important;
+    height: auto !important;
   }
 
   .logo {
-    height: 60px;
-    margin: 0 auto;
+    margin: 0 auto !important;
+    height: 60px !important;
   }
 
   nav {
-    margin-left: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    width: 100%;
+    margin: 0 !important;
+    justify-content: center !important;
+    width: 100% !important;
+    display: flex !important;
+    gap: 15px !important;
   }
 
-  nav a {
-    margin-left: 0;
-    font-size: 15px;
-  }
-
+ 
   .grid {
-    grid-template-columns: 1fr;
-    padding: 20px;
-    gap: 15px;
+    display: grid !important;
+    grid-template-columns: 1fr !important; 
+    padding: 15px !important;
+    gap: 20px !important;
   }
 
-  .card {
-    width: 100%;
+  .card, .category-card {
+    width: 100% !important;
+    margin: 0 auto !important;
   }
 }
