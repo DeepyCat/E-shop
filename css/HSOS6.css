@@ -1,12 +1,12 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: radial-gradient(circle at top, #0b1a2b, #02060c);
+  background: radial-gradient(circle at top, #08101a, #000000);
   color: #f2f6ff;
 }
 
 header {
-  background: rgba(5,10,20,0.9);
+  background: rgba(4, 8, 15, 0.9);
   backdrop-filter: blur(6px);
   padding: 15px 30px;
   display: flex;
