@@ -316,32 +316,30 @@ footer {
     flex-direction: column !important;
     gap: 15px !important;
     padding: 20px !important;
-    height: auto !important;
+    text-align: center !important;
   }
 
   .logo {
     margin: 0 auto !important;
-    height: 60px !important;
   }
 
   nav {
     margin: 0 !important;
     justify-content: center !important;
-    width: 100% !important;
-    display: flex !important;
     gap: 15px !important;
   }
 
- 
+  /* Toto opraví index a kategorie */
   .grid {
-    display: grid !important;
-    grid-template-columns: 1fr !important; 
-    padding: 15px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 20px !important;
     gap: 20px !important;
   }
 
   .card, .category-card {
     width: 100% !important;
-    margin: 0 auto !important;
+    min-width: 100% !important; /* Tohle je ta klíčová změna */
+    margin: 0 !important;
   }
 }
