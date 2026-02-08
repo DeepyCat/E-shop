@@ -175,7 +175,7 @@ footer {
   color: var(--muted);
   border-top: 1px solid #333;
 }
-
+/* test bez tohototadsafwsdfawssajkh
 @media (max-width: 700px) {
   header {
     flex-direction: column;
@@ -188,7 +188,7 @@ footer {
     justify-content: center;
   }
 }
-
+*/
 .pink {
   border-color: #ff5fa2;
 }
@@ -309,4 +309,41 @@ footer {
 .checkout-card-white .btn {
   background: linear-gradient(135deg, #000, #444);
   color: #fff;
+}
+
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .logo {
+    height: 60px;
+    margin: 0 auto;
+  }
+
+  nav {
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+  }
+
+  nav a {
+    margin-left: 0;
+    font-size: 15px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .card {
+    width: 100%;
+  }
 }
