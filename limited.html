@@ -24,12 +24,46 @@
 </section>
 
 <section class="grid">
-  <div class="card">
+  <div class="card" onclick="openModal('special')">
     <img src="img/limited1.png">
     <h3>Special Edition</h3>
     <div class="price">799 Kč</div>
   </div>
 </section>
+
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <img id="modal-img">
+    <h3 id="modal-title"></h3>
+    <p id="modal-desc"></p>
+    <div class="price" id="modal-price"></div>
+    <button>Přidat do košíku</button>
+    <span class="close" onclick="closeModal()">Zavřít</span>
+  </div>
+</div>
+
+<script>
+const data = {
+  special: {
+    img: "img/limited1.png",
+    title: "Sběratelský Special Edition",
+    price: "799 Kč",
+    desc: "Tento kousek je určen pro ty nejvášnivější sběratele. Vyrobeno z prémiových materiálů s unikátními detaily."
+  }
+};
+
+function openModal(key) {
+  document.getElementById("modal-img").src = data[key].img;
+  document.getElementById("modal-title").innerText = data[key].title;
+  document.getElementById("modal-desc").innerText = data[key].desc;
+  document.getElementById("modal-price").innerText = data[key].price;
+  document.getElementById("modal").style.display = "flex";
+}
+
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+}
+</script>
 
 </body>
 </html>

@@ -24,24 +24,70 @@
 </section>
 
 <section class="grid">
-  <div class="card">
+  <div class="card" onclick="openModal('lucy')">
     <img src="img/lucy.png">
     <h3>Lucy</h3>
     <div class="price">499 Kč</div>
   </div>
 
-  <div class="card">
+  <div class="card" onclick="openModal('lighter')">
     <img src="img/lighter.png">
     <h3>Lighter</h3>
     <div class="price">529 Kč</div>
   </div>
 
-  <div class="card">
+  <div class="card" onclick="openModal('burnice')">
     <img src="img/burnice.png">
     <h3>Burnice</h3>
     <div class="price">559 Kč</div>
   </div>
 </section>
+
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <img id="modal-img">
+    <h3 id="modal-title"></h3>
+    <p id="modal-desc"></p>
+    <div class="price" id="modal-price"></div>
+    <button>Přidat do košíku</button>
+    <span class="close" onclick="closeModal()">Zavřít</span>
+  </div>
+</div>
+
+<script>
+const data = {
+  lucy: {
+    img: "img/lucy.png",
+    title: "Luciana Auxesis Teodora Plyšák",
+    price: "499 Kč",
+    desc: "Lucy je mozkem operací Sons of Calydon. I když pochází z aristokratické rodiny, její styl boje s baseballovou pálkou a doprovodem malých prasátek Guardiao je nekompromisní."
+  },
+  lighter: {
+    img: "img/lighter.png",
+    title: "Lighter Plyšák",
+    price: "529 Kč",
+    desc: "Lighter je šampionem Outer Rim. Své nepřátele spaluje bleskovými údery a ohnivou energií. Je symbolem síly a odvahy celé frakce."
+  },
+  burnice: {
+    img: "img/burnice.png",
+    title: "Burnice White Plyšák",
+    price: "559 Kč",
+    desc: "Burnice miluje oheň a míchání drinků. Její plamenomety dokáží na bojišti vytvořit pekelnou atmosféru, zatímco ona se neustále usmívá."
+  }
+};
+
+function openModal(key) {
+  document.getElementById("modal-img").src = data[key].img;
+  document.getElementById("modal-title").innerText = data[key].title;
+  document.getElementById("modal-desc").innerText = data[key].desc;
+  document.getElementById("modal-price").innerText = data[key].price;
+  document.getElementById("modal").style.display = "flex";
+}
+
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+}
+</script>
 
 </body>
 </html>

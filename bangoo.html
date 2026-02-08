@@ -24,18 +24,58 @@
 </section>
 
 <section class="grid">
-  <div class="card">
+  <div class="card" onclick="openModal('b1')">
     <img src="img/bangboo1.png">
     <h3>Bangboo A</h3>
     <div class="price">399 Kč</div>
   </div>
 
-  <div class="card">
+  <div class="card" onclick="openModal('b2')">
     <img src="img/bangboo2.png">
     <h3>Bangboo B</h3>
     <div class="price">399 Kč</div>
   </div>
 </section>
+
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <img id="modal-img">
+    <h3 id="modal-title"></h3>
+    <p id="modal-desc"></p>
+    <div class="price" id="modal-price"></div>
+    <button>Přidat do košíku</button>
+    <span class="close" onclick="closeModal()">Zavřít</span>
+  </div>
+</div>
+
+<script>
+const data = {
+  b1: {
+    img: "img/bangboo1.png",
+    title: "Bangboo Typ A",
+    price: "399 Kč",
+    desc: "Standardní model Bangboo. Věrný společník pro každou expedici do Hollow."
+  },
+  b2: {
+    img: "img/bangboo2.png",
+    title: "Bangboo Typ B",
+    price: "399 Kč",
+    desc: "Vylepšená verze Bangboo s unikátním senzorem pro vyhledávání vzácných materiálů."
+  }
+};
+
+function openModal(key) {
+  document.getElementById("modal-img").src = data[key].img;
+  document.getElementById("modal-title").innerText = data[key].title;
+  document.getElementById("modal-desc").innerText = data[key].desc;
+  document.getElementById("modal-price").innerText = data[key].price;
+  document.getElementById("modal").style.display = "flex";
+}
+
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+}
+</script>
 
 </body>
 </html>

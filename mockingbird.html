@@ -24,24 +24,70 @@
 </section>
 
 <section class="grid">
-  <div class="card">
+  <div class="card" onclick="openModal('vivian')">
     <img src="img/vivian.png">
     <h3>Vivian</h3>
     <div class="price">549 Kč</div>
   </div>
 
-  <div class="card">
+  <div class="card" onclick="openModal('hugo')">
     <img src="img/hugo.png">
     <h3>Hugo</h3>
     <div class="price">499 Kč</div>
   </div>
 
-  <div class="card">
+  <div class="card" onclick="openModal('lycaon')">
     <img src="img/lycaon.png">
     <h3>Lycaon</h3>
     <div class="price">579 Kč</div>
   </div>
 </section>
+
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <img id="modal-img">
+    <h3 id="modal-title"></h3>
+    <p id="modal-desc"></p>
+    <div class="price" id="modal-price"></div>
+    <button>Přidat do košíku</button>
+    <span class="close" onclick="closeModal()">Zavřít</span>
+  </div>
+</div>
+
+<script>
+const data = {
+  vivian: {
+    img: "img/vivian.png",
+    title: "Vivian Plyšák",
+    price: "549 Kč",
+    desc: "Elegantní a tajemná. Vivian přináší do týmu MockingBird klidnou sílu a precizní strategii."
+  },
+  hugo: {
+    img: "img/hugo.png",
+    title: "Hugo Plyšák",
+    price: "499 Kč",
+    desc: "Hugo je známý svou neuvěřitelnou odolností a schopností vyřešit jakýkoliv problém hrubou silou i důvtipem."
+  },
+  lycaon: {
+    img: "img/lycaon.png",
+    title: "Von Lycaon Plyšák",
+    price: "579 Kč",
+    desc: "Vynikající sluha a ještě lepší bojovník. Lycaon představuje vrchol etikety a smrtící efektivity."
+  }
+};
+
+function openModal(key) {
+  document.getElementById("modal-img").src = data[key].img;
+  document.getElementById("modal-title").innerText = data[key].title;
+  document.getElementById("modal-desc").innerText = data[key].desc;
+  document.getElementById("modal-price").innerText = data[key].price;
+  document.getElementById("modal").style.display = "flex";
+}
+
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+}
+</script>
 
 </body>
 </html>
